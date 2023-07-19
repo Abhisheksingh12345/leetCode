@@ -7,7 +7,18 @@ class Solution
 public:
     int removeElement(vector<int> &nums, int val)
     {
-        
+        //O(n)
+        vector<int> new_nums;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if (nums[i] != val){
+                new_nums.push_back(nums[i]);
+            }
+        }
+        nums.clear();
+        for (int i : new_nums)
+            nums.push_back(i);
+        return nums.size();
     }
 };
 
