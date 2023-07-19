@@ -14,7 +14,10 @@ public:
             if (new_nums.back() != nums[i])
                 new_nums.push_back(nums[i]);
         }
-        return new_nums.size();
+        nums.clear();
+        for(int i : new_nums) 
+            nums.push_back(i);
+        return nums.size();
     }
 };
 
