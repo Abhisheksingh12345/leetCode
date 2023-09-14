@@ -11,6 +11,11 @@ class Solution {
 };
 
 int main() {
-    int arr[] {};
+    int arr[] {2,2,1,1,1,2,2};
+    vector<int> nums;
+    for(int i : arr) 
+        nums.push_back(i);
+    Solution s;
+    cout << s.majorityElement(nums);
     
 }
