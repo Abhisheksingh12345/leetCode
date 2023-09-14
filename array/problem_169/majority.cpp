@@ -6,7 +6,12 @@ using namespace std;
 class Solution {
     public :
         int majorityElement(vector<int> nums) {
-          
+            int arr[999]{0};
+            for(int i : nums) {
+                if(++arr[i] >  nums.size()/2)
+                    return i;
+            }
+            return nums[nums.size()/2];         
         }
 };
 
